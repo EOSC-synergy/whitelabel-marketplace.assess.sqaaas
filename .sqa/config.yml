@@ -1,0 +1,60 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: fix/updatego
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cyfronet-fid/whitelabel-marketplace:
+      branch: master
+      repo: https://github.com/cyfronet-fid/whitelabel-marketplace
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cyfronet-fid/whitelabel-marketplace git:
+        commands:
+        - /usr/bin/env sh .sqa/script.chestnut_courageous_spren.sh
+        container: qc.acc_papaya_proactive_anaconda
+  QC.Doc:
+    repos:
+      github.com/cyfronet-fid/whitelabel-marketplace find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.blush_whimsical_peacock.sh
+        container: qc.doc_persimmon_inventive_gecko
+      github.com/cyfronet-fid/whitelabel-marketplace git:
+        commands:
+        - /usr/bin/env sh .sqa/script.saffron_peaceful_impala.sh
+        container: qc.doc_slate_mysterious_coyote
+      github.com/cyfronet-fid/whitelabel-marketplace markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.pistachio_reckless_crocodile.sh
+        container: qc.doc_cinnamon_humorous_clownfish
+  QC.Lic:
+    repos:
+      github.com/cyfronet-fid/whitelabel-marketplace licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.poppy_authentic_camel.sh
+        container: qc.lic_forest_courageous_stork
+  QC.Sty:
+    repos:
+      github.com/cyfronet-fid/whitelabel-marketplace hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.glacier_impulsive_buffalo.sh
+        container: qc.sty_mahogany_exuberant_dingo
+      github.com/cyfronet-fid/whitelabel-marketplace jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.cherry_anxious_anaconda.sh
+        container: qc.sty_tan_realistic_bullfrog
+      github.com/cyfronet-fid/whitelabel-marketplace rubocop:
+        commands:
+        - /usr/bin/env sh .sqa/script.orchid_outgoing_seal.sh
+        container: qc.sty_bluebell_humorous_kingfisher
+  QC.Ver:
+    repos:
+      github.com/cyfronet-fid/whitelabel-marketplace get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.saffron_open_cockatoo.sh
+        container: qc.ver_marina_aware_turkey
+timeout: 5400
