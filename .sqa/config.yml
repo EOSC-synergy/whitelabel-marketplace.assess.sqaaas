@@ -15,46 +15,46 @@ sqa_criteria:
     repos:
       github.com/cyfronet-fid/whitelabel-marketplace git:
         commands:
-        - /usr/bin/env sh .sqa/script.chestnut_courageous_spren.sh
-        container: qc.acc_papaya_proactive_anaconda
+        - /usr/bin/env sh .sqa/script.indigo_visionary_rabbit.sh
+        container: qc.acc_sapphire_warm_kiwi
   QC.Doc:
     repos:
       github.com/cyfronet-fid/whitelabel-marketplace find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.blush_whimsical_peacock.sh
-        container: qc.doc_persimmon_inventive_gecko
+        - /usr/bin/env sh .sqa/script.ivory_friendly_chameleon.sh
+        container: qc.doc_orchid_authentic_gerbil
       github.com/cyfronet-fid/whitelabel-marketplace git:
         commands:
-        - /usr/bin/env sh .sqa/script.saffron_peaceful_impala.sh
-        container: qc.doc_slate_mysterious_coyote
+        - /usr/bin/env sh .sqa/script.orange_methodical_quokka.sh
+        container: qc.doc_pink_sincere_ferret
       github.com/cyfronet-fid/whitelabel-marketplace markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.pistachio_reckless_crocodile.sh
-        container: qc.doc_cinnamon_humorous_clownfish
+        - /usr/bin/env sh .sqa/script.viridian_affectionate_albatross.sh
+        container: qc.doc_taupe_compassionate_mongoose
   QC.Lic:
     repos:
       github.com/cyfronet-fid/whitelabel-marketplace licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.poppy_authentic_camel.sh
-        container: qc.lic_forest_courageous_stork
+        - /usr/bin/env sh .sqa/script.sunset_dedicated_penguin.sh
+        container: qc.lic_snow_ambitious_jackal
   QC.Sty:
     repos:
       github.com/cyfronet-fid/whitelabel-marketplace hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.glacier_impulsive_buffalo.sh
-        container: qc.sty_mahogany_exuberant_dingo
+        - /usr/bin/env sh .sqa/script.silver_lucky_uakari.sh
+        container: qc.sty_bluebell_graceful_crane
       github.com/cyfronet-fid/whitelabel-marketplace jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cherry_anxious_anaconda.sh
-        container: qc.sty_tan_realistic_bullfrog
+        - /usr/bin/env sh .sqa/script.turquoise_creative_goat.sh
+        container: qc.sty_dawn_alert_walrus
       github.com/cyfronet-fid/whitelabel-marketplace rubocop:
         commands:
-        - /usr/bin/env sh .sqa/script.orchid_outgoing_seal.sh
-        container: qc.sty_bluebell_humorous_kingfisher
+        - /usr/bin/env sh .sqa/script.indigo_compassionate_pelican.sh
+        container: qc.sty_onyx_amiable_orangutan
   QC.Ver:
     repos:
       github.com/cyfronet-fid/whitelabel-marketplace get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.saffron_open_cockatoo.sh
-        container: qc.ver_marina_aware_turkey
+        - /usr/bin/env sh .sqa/script.fuchsia_confident_spider.sh
+        container: qc.ver_champagne_kind_koala
 timeout: 5400
