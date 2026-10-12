@@ -4,57 +4,57 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: fix/updatego
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/cyfronet-fid/whitelabel-marketplace:
-      branch: master
-      repo: https://github.com/cyfronet-fid/whitelabel-marketplace
+    github.com/cessda/whitelabel-marketplace:
+      branch: cessda-customisations
+      repo: https://github.com/cessda/whitelabel-marketplace
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/cyfronet-fid/whitelabel-marketplace git:
+      github.com/cessda/whitelabel-marketplace git:
         commands:
-        - /usr/bin/env sh .sqa/script.coral_restless_boa.sh
-        container: qc.acc_cayenne_adaptable_roc
+        - /usr/bin/env sh .sqa/script.bronze_dramatic_lobster.sh
+        container: qc.acc_magenta_carefree_spider
   QC.Doc:
     repos:
-      github.com/cyfronet-fid/whitelabel-marketplace find_doc_files.py:
+      github.com/cessda/whitelabel-marketplace find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.ivory_melancholy_pegasus.sh
-        container: qc.doc_sunset_goofy_caiman
-      github.com/cyfronet-fid/whitelabel-marketplace git:
+        - /usr/bin/env sh .sqa/script.marina_vibrant_roadrunner.sh
+        container: qc.doc_pansy_bewildered_turtle
+      github.com/cessda/whitelabel-marketplace git:
         commands:
-        - /usr/bin/env sh .sqa/script.caramel_fair_wildcat.sh
-        container: qc.doc_apricot_observant_python
-      github.com/cyfronet-fid/whitelabel-marketplace markdownlint:
+        - /usr/bin/env sh .sqa/script.scarlet_productive_tiger.sh
+        container: qc.doc_cerulean_harmonious_marmoset
+      github.com/cessda/whitelabel-marketplace markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.dusk_loving_lobster.sh
-        container: qc.doc_mist_goofy_octopus
+        - /usr/bin/env sh .sqa/script.mango_delighted_uakari.sh
+        container: qc.doc_saffron_silly_cassowary
   QC.Lic:
     repos:
-      github.com/cyfronet-fid/whitelabel-marketplace licensee:
+      github.com/cessda/whitelabel-marketplace licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.cornflower_spirited_narwhal.sh
-        container: qc.lic_champagne_understanding_ferret
+        - /usr/bin/env sh .sqa/script.flax_grumpy_dormouse.sh
+        container: qc.lic_glaucous_authentic_gecko
   QC.Sty:
     repos:
-      github.com/cyfronet-fid/whitelabel-marketplace hadolint:
+      github.com/cessda/whitelabel-marketplace hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.lime_upbeat_kraken.sh
-        container: qc.sty_reef_grateful_alligator
-      github.com/cyfronet-fid/whitelabel-marketplace jsonlint:
+        - /usr/bin/env sh .sqa/script.fern_bright_kookaburra.sh
+        container: qc.sty_sage_insightful_reindeer
+      github.com/cessda/whitelabel-marketplace jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.purple_realistic_grasshopper.sh
-        container: qc.sty_jade_reserved_wasp
-      github.com/cyfronet-fid/whitelabel-marketplace rubocop:
+        - /usr/bin/env sh .sqa/script.cinnabar_studious_kingfisher.sh
+        container: qc.sty_grape_focused_toucan
+      github.com/cessda/whitelabel-marketplace rubocop:
         commands:
-        - /usr/bin/env sh .sqa/script.vermilion_artistic_gazelle.sh
-        container: qc.sty_taupe_ardent_gecko
+        - /usr/bin/env sh .sqa/script.ochre_imaginative_gibbon.sh
+        container: qc.sty_fuchsia_outgoing_dugong
   QC.Ver:
     repos:
-      github.com/cyfronet-fid/whitelabel-marketplace get_git_tags.py:
+      github.com/cessda/whitelabel-marketplace get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.navy_ardent_donkey.sh
-        container: qc.ver_polar_dedicated_spider
+        - /usr/bin/env sh .sqa/script.gold_carefree_coyote.sh
+        container: qc.ver_dahlia_mischievous_weasel
 timeout: 5400
